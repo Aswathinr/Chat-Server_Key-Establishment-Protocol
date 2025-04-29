@@ -24,7 +24,7 @@ Secure group chat: AES-GCM is used for end-to-end encrypted messaging.
 
 Server S acts only as a blind relay and certificate provider.
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 Python 3
 
 Cryptography (RSA, AES-GCM, HKDF, Digital Signatures)
@@ -35,8 +35,9 @@ JSON for data encoding
 
 Base64 encoding for binary data transmission
 
-⚙️ How It Works
-Key Exchange:
+## ⚙️ How It Works
+
+### Key Exchange:
 
 Each client generates a random nonce.
 
@@ -46,7 +47,7 @@ A digital signature (RSA-PSS) over nonce + IDs is generated.
 
 Encrypted nonces and signatures are sent to the server.
 
-Payload Verification:
+### Payload Verification:
 
 Each client decrypts received nonces using its private key.
 
@@ -54,13 +55,13 @@ Reconstructs hash input (nonce + IDs) and verifies sender's signature.
 
 On successful verification, nonces are collected.
 
-Session Key Derivation:
+### Session Key Derivation:
 
 Clients use HKDF-SHA256 to derive a common shared key (Kabc).
 
 The server cannot reconstruct Kabc or see any random nonce.
 
-Secure Chat:
+### Secure Chat:
 
 Messages are encrypted with AES-GCM using Kabc.
 
