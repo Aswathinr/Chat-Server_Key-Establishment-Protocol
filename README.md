@@ -12,7 +12,7 @@ Integrity of all critical communications.
 
 No trust required in the relay server.
 
-🔒 Key Features
+🔒 # Key Features
 Certificate-based public key infrastructure: Each entity (A, B, C, Server S) uses X.509 certificates.
 
 Secure key establishment: Random nonces are encrypted and authenticated between clients.
