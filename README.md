@@ -4,13 +4,13 @@ This project implements a Secure Group Chat System where three clients (A, B, C)
 
 The system ensures:
 
-Confidentiality of all exchanged data.
+- Confidentiality of all exchanged data.
 
-Authentication of participants.
+- Authentication of participants.
 
-Integrity of all critical communications.
+- Integrity of all critical communications.
 
-No trust required in the relay server.
+- No trust required in the relay server.
 
 ## 🔒 Key Features
 
